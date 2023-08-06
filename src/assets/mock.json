@@ -1,0 +1,26 @@
+{
+  "events": [
+    {
+      "name": "Jazz Concert in the Park",
+      "date": "2023-08-20",
+      "time": "19:00",
+      "location": "Central Park",
+      "description": "Enjoy a night full of jazz music in Central Park. There will be performances by local bands and a wide variety of jazz styles for all tastes. Don't miss it!"
+    },
+    {
+      "name": "Artificial Intelligence Talk",
+      "date": "2023-09-05",
+      "time": "18:30",
+      "location": "Convention Center",
+      "description": "An event to learn about the latest trends in artificial intelligence. Experts in the field will share their knowledge, and there will be live demonstrations of AI applications in various industries."
+    },
+    {
+      "name": "Vegan Cooking Workshop",
+      "date": "2023-08-15",
+      "time": "16:00",
+      "location": "Green Restaurant",
+      "description": "Learn to prepare delicious vegan recipes in this hands-on workshop. Our chefs will teach you techniques and tricks to cook vegan dishes that will amaze your friends and family."
+    }
+  ]
+}
+
