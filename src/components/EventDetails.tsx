@@ -4,10 +4,9 @@ import style from '../styles/EventDetails.module.css'
 import { Modal } from "./subComponents/Modal";
 export function EventDetail() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [ what, setWhat ] = useState<boolean>(true)
+  const [what, setWhat] = useState<boolean>(true)
   const location = useLocation();
-  const event = location.state.data;
-  console.log({ event })
+  const event = location.state.data
   return (
     <div className={style.container}>
       <div className={style.container_card}>
@@ -19,9 +18,9 @@ export function EventDetail() {
           <button onClick={() => {
             setIsOpen(true)
             setWhat(false)
-          } }>Edit Event</button>
+          }}>Edit Event</button>
         </section>
-        {isOpen ? <Modal setIsOpen={setIsOpen} what={what} setWhat={setWhat}/> : null}
+        {isOpen ? <Modal setIsOpen={setIsOpen} what={what} setWhat={setWhat} event={event} /> : null}
         <section>
           <p>{event.location}</p>
           <h2>{event.name}</h2>

@@ -1,22 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useSearch(){
+export function useSearch() {
   const [search, updateSearch] = useState('');
   const [error, setError] = useState<string | null>();
   const isFirsInput = useRef(true)
 
   useEffect(() => {
-    if(isFirsInput.current){
+    if (isFirsInput.current) {
       isFirsInput.current = search === ''
       return
     }
 
-    if(search === ''){
+    if (search === '') {
       setError('Cannot search for an empty event')
       return
     }
 
-    if(search.match(/^\d+$/)){
+
+    if (search.match(/^\d+$/)) {
       setError(`Can't search for a movie with a number`)
       return
     }
@@ -27,7 +28,7 @@ export function useSearch(){
     }
 
     setError(null)
-  } ,[search])
+  }, [search])
 
   return { search, updateSearch, error }
 }

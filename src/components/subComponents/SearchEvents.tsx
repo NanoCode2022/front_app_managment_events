@@ -1,8 +1,11 @@
 import { ChangeEvent, FormEvent } from "react";
-import { useSearch } from "../../hooks/useSearch"
+interface Props{
+  search: string;
+  updateSearch: (search: string) => void,
+  error: string | null | undefined;
 
-export function SearchEvents(){
-  const {search, updateSearch, error} = useSearch()
+}
+export function SearchEvents({search, updateSearch, error}:Props){
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newSearch = event.target.value;
@@ -11,7 +14,7 @@ export function SearchEvents(){
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(search)
+    updateSearch(search)
   }
 
   return (
