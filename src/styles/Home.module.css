@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+  background: #000;
+  width: 100%;
+  height: 500px;
+  color: #fff;
+}
+
+.title_web{
+  font-size: 8rem;
+}
+
+.search_box{
+  padding: 4px;
+  width: 300px;
+  margin-right: 5px;
+}

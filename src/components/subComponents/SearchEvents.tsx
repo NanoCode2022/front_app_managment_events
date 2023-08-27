@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent } from "react";
+import styles from "../../styles/Home.module.css"
 interface Props{
   search: string;
   updateSearch: (search: string) => void,
@@ -20,7 +21,7 @@ export function SearchEvents({search, updateSearch, error}:Props){
   return (
     <>
       <form action="" onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} value={search} placeholder="Search for an event" />
+      <input type="text" onChange={handleChange} className={styles.search_box} value={search} placeholder="Search for an event" />
       <button>Search</button>
     </form>
     <p>{error}</p>

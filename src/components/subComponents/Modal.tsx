@@ -15,6 +15,7 @@ export function Modal({ setIsOpen, setWhat, what, event }: Props) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fields = Object.fromEntries(new FormData(e.currentTarget));
+    alert('this function is not working')
     console.log(fields)
   }
   return <div className={style.container}>

@@ -22,11 +22,6 @@ export function useSearch() {
       return
     }
 
-    if (search.length < 3) {
-      setError('Search must have at least 3 characters')
-      return
-    }
-
     setError(null)
   }, [search])
 
