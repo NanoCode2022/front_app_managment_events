@@ -8,7 +8,7 @@ export function CreateEvent() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fields = Object.fromEntries(new FormData(e.currentTarget));
-    callApi("http://localhost:3000/api/events", fields, "POST").then(() =>
+    callApi("https://backevents-nanocode2022.vercel.app/api/events", fields, "POST").then(() =>
       navigate('/')
     );
   };

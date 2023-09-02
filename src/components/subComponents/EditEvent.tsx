@@ -22,7 +22,7 @@ export function EditEvent({ setIsOpen, setWhat, event }: Props) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fields = Object.fromEntries(new FormData(e.currentTarget));
-    callApi(`http://localhost:3000/api/events/edit/${fields.name}`,fields,'PUT')
+    callApi(`https://backevents-nanocode2022.vercel.app/api/events/edit/${fields.name}`,fields,'PUT')
     .then(() => navigate('/'))
   }
   return (

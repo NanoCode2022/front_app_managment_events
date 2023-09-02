@@ -11,7 +11,7 @@ export function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/events?name=${search}`)
+    fetch(`https://backevents-nanocode2022.vercel.app/api/events?name=${search}`)
       .then((response) => response.json())
       .then((data: IEvent[]) => {
         setListingEvents(data);
