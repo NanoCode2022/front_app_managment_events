@@ -10,12 +10,15 @@ interface Props {
 }
 
 export function EditEvent({ setIsOpen, setWhat, event }: Props) {
-  const [valuesEvent, setValueEvent] = useState({ name: event.name, date: event.date, time: event.time, location: event.location, description: event.description, assist: event.assist })
+  const [valuesEvent, setValueEvent] = useState<IEvent>({ name: event.name, date: event.date, time: event.time, location: event.location, description: event.description, assist: event.assist })
   const navigate = useNavigate()
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value
-    setValueEvent({ [e.currentTarget]: newValue })
+    setValueEvent(prevValuesEvent => ({
+      ...prevValuesEvent,  // Expande el objeto de estado existente
+      [e.target.name]: newValue, // Establece la propiedad específica basada en el atributo "name" del elemento de entrada
+    }));
   }
 
 
